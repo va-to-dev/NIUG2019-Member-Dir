@@ -1,0 +1,68 @@
+<div class="SearchDiv row">
+   <div class="row Heading"> 
+       <h2> {{title || uppercase}} </h2>
+      </div>
+<div class="col-sm-6">
+ <label class="lbSearch">Search: <input class="SearchTextBox SearchField" [(ngModel)]="searchTextName" placeholder="Name"></label> 
+</div>
+<div class="col-sm-6">
+
+  
+</div>
+
+</div>
+
+
+<div id="Theader" class="row hidden-xs">
+    <div class="col-sm-3">
+        Full Name
+    </div>
+    <div class="col-sm-3">
+       
+    </div>
+    <div class="col-sm-2">
+       Address
+    </div>
+    <div class="col-sm-4 col-xs-6 dvBlock">
+       
+        <div class="col-sm-12 col-xs-12">
+     Company
+    </div>
+    </div>
+</div>
+
+<div class="MemberRow"  *ngFor="let member of members | nameFilter : searchTextName |  paginate: { itemsPerPage:10, currentPage: p } ">
+
+<div class="row activeRow">
+    <div class="col-sm-3 col-xs-12 dvBlock">
+        <div class="hidden-lg hidden-md hidden-sm col-xs-12">
+            <span><strong>Name</strong></span>
+        </div>
+        <div class="col-sm-12 col-xs-12">
+            {{ member.fullName }}
+        </div>
+    </div>
+   
+    <div class="col-sm-5 col-xs-6 dvBlock">
+        <div class="hidden-lg hidden-md hidden-sm col-xs-12">
+            <span><strong>Address</strong></span>
+        </div>
+        <div class="col-sm-12 col-xs-12">
+            {{ member.fullAddress }}
+        </div>
+    </div>
+    <div class="col-sm-4 col-xs-6 dvBlock">
+        <div class="hidden-lg hidden-md hidden-sm col-xs-12">
+            <span><strong>Company</strong></span>
+        </div>
+        <div class="col-sm-12 col-xs-12">
+            {{ member.company }}
+        
+        </div>
+    </div>
+</div>
+<hr>
+</div>
+<div class="text-center">
+<pagination-controls (pageChange)="p =$event"></pagination-controls>
+</div>

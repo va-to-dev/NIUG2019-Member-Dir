@@ -1,0 +1,57 @@
+div#Theader {
+    font-size: 16px;
+    font-weight: bold;
+    border-bottom: 1px solid;
+    margin-bottom: 23px;
+    text-align: center;
+}
+
+@media(min-width:768px)
+{
+.MemberRow
+{
+    text-align: center;
+
+}
+
+.MemberRow h3
+{
+  
+width: 80%;
+margin: 0 auto;
+}
+
+input.SearchTextBox.SearchField {
+    margin: 0 auto;
+
+}
+
+.SearchDiv {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+}
+
+@media(max-width:767px)
+{
+.SearchTextBox.SearchField {
+    margin: 0 auto;
+    width: 100%;
+}
+
+.Heading
+{padding-left: 30px;
+padding-right: 30px;}
+
+
+}
+
+input.SearchTextBox {
+    background: white;
+    border: 1px solid;
+}
+
+.Heading
+{margin-bottom:  20px;}
+
